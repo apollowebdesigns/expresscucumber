@@ -22,11 +22,11 @@ Given('a place I want to go {string}', function(string, callback) {
 
 When('I go to it {string}', function(string, callback) {
     console.log(string);
-    got('http://www.google.com', { json: true }).then(response => {
+    got('http://localhost:3000/users', { json: true }).then(response => {
         console.log(response.body.url);
         console.log(response.body.explanation);
+        return callback();
     })
-    callback();
 })
 
 Then('I get stuff back {string}', function(string, callback) {
