@@ -43,10 +43,10 @@ Given('a route I want to test {string}', function(string, callback) {
     callback();
 })
 
-When('I fire it up {string}', function(string, callback) {
+When('I fire it up {string} {int}', function(string, number, callback) {
     request(app)
         .get(string)
-        .expect(200, callback);
+        .expect(number, callback);
 })
 
 Then('I get a working function response {string} {int}', function(string, number, callback) {

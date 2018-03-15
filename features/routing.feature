@@ -6,10 +6,11 @@ Feature: test packages with routes
 
   Scenario Outline: I will call the routing functions
     Given a route I want to test <var>
-    When I fire it up <increment>
+    When I fire it up <increment> <call>
     Then I get a working function response <url> <code>
 
     Examples:
-      | var      | increment      | url       | code |
-      | "/"      | "/"            |  "/"      | 200  |
-      | "/users" | "/users"       |  "/users" | 200  |
+      | var      | increment  | call | url      | code |
+      | "/"      | "/"        | 200  | "/"      | 200  |
+      | "/users" | "/users"   | 200  | "/users" | 200  |
+      | "/fake"  | "/fake"    | 404  | "/fake"  | 404  |
