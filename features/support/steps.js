@@ -33,3 +33,22 @@ Then('I get stuff back {string}', function(string, callback) {
     console.log(string);
     callback();
 })
+
+Given('a route I want to test {string}', function(string, callback) {
+    console.log(string);
+    callback();
+})
+
+When('I fire it up {string}', function(string, callback) {
+    console.log(string);
+    got('http://localhost:3000/users', { json: true }).then(response => {
+        console.log(response.body.url);
+        console.log(response.body.explanation);
+        return callback();
+    })
+})
+
+Then('I get a working function response {string}', function(string, callback) {
+    console.log(string);
+    callback();
+})
