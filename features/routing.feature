@@ -10,5 +10,5 @@ Feature: test packages with routes
     Then I get a working function response <result>
 
     Examples:
-      | var                           | increment         | result   |
-      | "http://localhost:3000/users" |         "dfsiodj" |    "105" |
+      | var | increment | result |
+      | "/" | "/"       |  "105" |

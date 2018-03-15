@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "nyc --reporter=html ./node_modules/.bin/cucumber-js --fail-fast"
+    "test": "nyc --reporter=html ./node_modules/.bin/cucumber-js"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -19,6 +19,7 @@
     "chai": "^4.1.2",
     "cucumber": "^4.0.0",
     "got": "^8.3.0",
-    "nyc": "^11.6.0"
+    "nyc": "^11.6.0",
+    "supertest": "^3.0.0"
   }
 }
