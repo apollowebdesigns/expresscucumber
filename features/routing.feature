@@ -7,8 +7,9 @@ Feature: test packages with routes
   Scenario Outline: I will call the routing functions
     Given a route I want to test <var>
     When I fire it up <increment>
-    Then I get a working function response <result>
+    Then I get a working function response <url> <code>
 
     Examples:
-      | var | increment | result |
-      | "/" | "/"       |  "105" |
+      | var      | increment      | url       | code |
+      | "/"      | "/"            |  "/"      | 200  |
+      | "/users" | "/users"       |  "/users" | 200  |

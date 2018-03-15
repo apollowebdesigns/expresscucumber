@@ -49,8 +49,8 @@ When('I fire it up {string}', function(string, callback) {
         .expect(200, callback);
 })
 
-Then('I get a working function response {string}', function(string, callback) {
+Then('I get a working function response {string} {int}', function(string, number, callback) {
     request(app)
         .get(string)
-        .expect(200, callback);
+        .expect(number, callback);
 })
