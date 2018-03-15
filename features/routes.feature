@@ -1,14 +1,16 @@
 # features/simple_math.feature
-Feature: test get request
-  In order make a get
-  As a developer
-  I want to make a get request
+Feature: test packages with routes
+  In order to check the modules export ok
+  As a developer building the modules
+  I want to call the functions
 
-  Scenario Outline: make a get request
-    Given a place I want to go <var>
-    When I go to it <increment>
-    Then I get stuff back <result>
+  Scenario Outline: I will call the routing functions
+    Given a route I want to test <var>
+    When I fire it up <increment> <call>
+    Then I get a working function response <url> <code>
 
     Examples:
-      | var                           | increment         | result   |
-      | "http://localhost:3000/users" |         "dfsiodj" |    "105" |
+      | var      | increment  | call | url      | code |
+      | "/"      | "/"        | 200  | "/"      | 200  |
+      | "/users" | "/users"   | 200  | "/users" | 200  |
+      | "/fake"  | "/fake"    | 404  | "/fake"  | 404  |
