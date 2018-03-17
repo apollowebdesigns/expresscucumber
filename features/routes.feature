@@ -10,7 +10,10 @@ Feature: test packages with routes
     Then I get a working function response <url> <code>
 
     Examples:
-      | var      | increment  | call | url      | code |
-      | "/"      | "/"        | 200  | "/"      | 200  |
-      | "/users" | "/users"   | 200  | "/users" | 200  |
-      | "/fake"  | "/fake"    | 404  | "/fake"  | 404  |
+      | var               | increment           | call | url                | code |
+      | "/"               | "/"                 | 200  | "/"                | 200  |
+      | "/users"          | "/users"            | 200  | "/users"           | 200  |
+      | "/fake"           | "/fake"             | 404  | "/fake"            | 404  |
+      | "/faked"          | "/faked"            | 404  | "/faked"           | 404  |
+      | "/users?test=667" | "/users?test=667"   | 500  | "/users?test=667"  | 500  |
+      | "/users?^&*(=667" | "/users?^&*(=667"   | 500  | "/users?^&*(=667"  | 500  |
