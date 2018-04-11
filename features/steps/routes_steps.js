@@ -2,7 +2,7 @@
 const { Given, When, Then, Before, After } = require('cucumber')
 const app = require('../../app')
 const request = require('supertest')
-const world = require('./world').world
+const world = require('./../support/world').world
 let getRequest
 
 Before(() => {
