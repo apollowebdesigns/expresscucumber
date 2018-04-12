@@ -4,6 +4,7 @@ const { setWorldConstructor } = require('cucumber')
 class CustomWorld {
 	constructor() {
 		this.variable = 0
+		this.test = 'hello'
 	}
 
 	setTo(number) {

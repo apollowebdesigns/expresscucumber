@@ -26,6 +26,6 @@ Then('I get a working function response {string} {int}', function(string, number
 	// const world = this
 	console.log('what is the test?')
 	console.log(this.variable)
-	console.log(this.setTo())
+	console.log(this.test)
 	getRequest.expect(number, callback)
 })
