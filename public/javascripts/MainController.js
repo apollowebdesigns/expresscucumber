@@ -5,9 +5,7 @@
 		.module('app')
 		.controller('MainController', MainController)
 
-	MainController.$inject = ['$scope']
-
-	function MainController($scope) {
-		$scope.test = 'hello'
+	function MainController() {
+		this.test = 'hello'
 	}
 })()
