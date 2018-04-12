@@ -2,7 +2,7 @@
 const { Given, When, Then, Before, After } = require('cucumber')
 const app = require('../../app')
 const request = require('supertest')
-const world = require('./../support/world').world
+// const world = require('./../support/world').world
 let getRequest
 
 Before(() => {
@@ -23,8 +23,9 @@ When('I fire it up {string} {int}', function(string, number, callback) {
 })
 
 Then('I get a working function response {string} {int}', function(string, number, callback) {
-	const world = this
+	// const world = this
 	console.log('what is the test?')
-	console.log(world.variable)
+	console.log(this.variable)
+	console.log(this.setTo())
 	getRequest.expect(number, callback)
 })
