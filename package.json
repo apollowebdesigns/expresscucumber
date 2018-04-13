@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "test": "nyc --include-all-sources true --reporter=lcov ./node_modules/.bin/cucumber-js",
-    "browser-test": "node ./node_modules/karma/bin/karma start"
+    "browser-test": "node ./node_modules/karma/bin/karma start",
+    "protractor-test": "node ./node_modules/protractor/bin/protractor protractor/protractor.conf.js"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -33,6 +34,7 @@
     "karma-ng-json2js-preprocessor": "^2.0.1",
     "materialize-css": "^0.100.2",
     "nyc": "^11.6.0",
+    "protractor": "^5.3.1",
     "supertest": "^3.0.0"
   }
 }
