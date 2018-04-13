@@ -24,12 +24,14 @@
     "eslint": "^4.19.0",
     "got": "^8.3.0",
     "jasmine-core": "^3.1.0",
+    "jquery": "^3.3.1",
     "karma": "^2.0.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.1",
     "karma-jasmine": "^1.1.1",
     "karma-ng-html2js-preprocessor": "^1.0.0",
     "karma-ng-json2js-preprocessor": "^2.0.1",
+    "materialize-css": "^0.100.2",
     "nyc": "^11.6.0",
     "supertest": "^3.0.0"
   }

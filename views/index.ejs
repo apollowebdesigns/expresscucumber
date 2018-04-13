@@ -2,6 +2,7 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link rel='stylesheet' href='/materialize-css/dist/css/materialize.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body ng-app="app" ng-controller="MainController as mainCtrl">
@@ -9,6 +10,8 @@
     <p>Welcome to <%= title %></p>
     <p>{{mainCtrl.test}}</p>
   </body>
+  <script src='/jquery/dist/jquery.js'></script>
+  <script src='/materialize-css/dist/js/materialize.js'></script>
   <script src='/angular/angular.js'></script>
   <script src='/javascripts/app.js'></script>
   <script src='/javascripts/MainController.js'></script>
